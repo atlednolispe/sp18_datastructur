@@ -14,6 +14,31 @@ public class LeapYear {
         }
     }
 
+    /** Judge if the year is leap.
+     *
+     */
+    public static boolean isLeapYear(int year) {
+        int mod100;
+        int mod400;
+        int mod4;
+        mod100 = year % 100;
+        if (mod100 == 0) {
+            mod400 = year % 400;
+            if (mod400 == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            mod4 = year % 4;
+            if (mod4 == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
     /** Must be provided an integer as a command line argument ARGS. */
     public static void main(String[] args) {
         if (args.length < 1) {
