@@ -1,5 +1,5 @@
 public class NBody {
-    public static int readNumber(String file) {
+    private static int readNumber(String file) {
         In in = new In(file);
         int N = in.readInt();
         return N;
@@ -48,7 +48,7 @@ public class NBody {
         String starfieldFilePath = "images/starfield.jpg";
         StdDraw.picture(0, 0, starfieldFilePath);
         for (Planet p: planets) {
-            p.show();
+            p.draw();
         }
         StdDraw.show();
 
@@ -74,7 +74,7 @@ public class NBody {
             }
 
             for (Planet p: planets) {
-                p.show();
+                p.draw();
             }
             StdDraw.show();
 
